@@ -40,9 +40,9 @@ public class RectangleTest {
     // This is not working for some reason. Refuses to run the test?
     @Test
     public void doubleSizeTest(){
-        Circle myCircle = new Circle(1);
-        myCircle.doubleSize();
-        assertEquals(1.4142,myCircle.getRadius());
+        Rectangle myRectangle = new Rectangle(2,4);
+        myRectangle.doubleSize();
+        assertEquals("4,6",String(myRectangle));
     }
 
     @Test
