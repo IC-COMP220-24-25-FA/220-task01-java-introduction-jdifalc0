@@ -17,15 +17,15 @@ public class RectangleTest {
     
     @Test
     public void calcAreaTest(){
-        Circle myCircle = new Circle(1);
+        Rectangle myRectangle = new Rectangle(1,2);
         //3rd parameter says how far off it can be since it is a double
-        assertEquals(3.1415, myCircle.calcArea(), 0.0001);
+        assertEquals(2, myRectangle.calcArea());
         
-        myCircle = new Circle(5.5);
-        assertEquals(95.0331, myCircle.calcArea(), 0.0001);
+        myRectangle = new Rectangle(5,6);
+        assertEquals(30, myRectangle.calcArea());
 
-        myCircle = new Circle(0.001);
-        assertEquals(0.00000314159, myCircle.calcArea(), 0.0000000001);
+        myCircle = new Circle(1.5,3);
+        assertEquals(4.5, myRectangle.calcArea());
     }
     @Test
     public void longestlinewithinTest(){
