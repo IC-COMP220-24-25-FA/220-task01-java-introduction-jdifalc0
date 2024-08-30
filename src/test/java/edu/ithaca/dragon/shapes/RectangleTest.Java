@@ -29,12 +29,9 @@ public class RectangleTest {
     }
     @Test
     public void longestlinewithinTest(){
-        Circle myCircle = new Circle(2);
-        assertEquals(4, myCircle.longestLineWithin());
-        myCircle = new Circle(2.5);
-        assertEquals(5, myCircle.longestLineWithin());
-        myCircle = new Circle(0.001);
-        assertEquals(0.002, myCircle.longestLineWithin());
+        Rectangle myRectangle = new Rectangle(3,4);
+        assertEquals(5, myRectangle.longestLineWithin());
+    
 
     }
     // This is not working for some reason. Refuses to run the test?
