@@ -37,6 +37,13 @@ public class CircleTest {
         assertEquals(0.002, myCircle.longestLineWithin());
 
     }
+    // This is not working for some reason. Refuses to run the test?
+    @Test
+    public void doubleSizeTest(){
+        Circle myCircle = new Circle(1);
+        myCircle.doubleSize();
+        assertEquals(1.4142,myCircle.getRadius());
+    }
 
     @Test
     public void TestConstructorError(){

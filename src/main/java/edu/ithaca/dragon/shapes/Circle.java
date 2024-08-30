@@ -1,5 +1,7 @@
 package edu.ithaca.dragon.shapes;
 
+import java.lang.classfile.instruction.ThrowInstruction;
+
 public class Circle {
     private double radius;
 
@@ -8,8 +10,11 @@ public class Circle {
      */
     public Circle(double radius){
         this.radius = radius;
+        
     }
-
+    public double getRadius(){
+        return this.radius;
+    }
     /**
      * @return the area of this circle
      */
@@ -21,7 +26,7 @@ public class Circle {
      * @post doubles the size of this circle
      */
     public void doubleSize(){
-        throw new RuntimeException("Not implemented yet");
+        this.radius = radius *1.4142;
     }
 
     /**
