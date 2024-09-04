@@ -23,14 +23,21 @@ public class FunctionPractice {
      * @return the final price at register of the given item after discount and tax applied
      */
     public static double calcSalePrice(double originalPrice, double discountPercent, double salesTax){
-        throw new RuntimeException("Not Implemented");
+         double percentage = (discountPercent /100)+1;
+        return (originalPrice*percentage)+salesTax;
     }
 
     /**
      * @return true if the data collected shows the dog is good, false if bad dog today
      */
     public static boolean isGoodDog(int yearsOld, int daysSinceShoesChewed, boolean fetchedThePaperToday){
-        throw new RuntimeException("Not Implemented");
+        if (daysSinceShoesChewed == 0){
+            return false;
+        }else if (fetchedThePaperToday == false){
+            return false;
+        }else{
+            return true;
+        }
     }
 
     /**
@@ -38,7 +45,14 @@ public class FunctionPractice {
      * If the largest number occurs more than once, return the index of the first occurence.
      */
     public static int findFirstLargest(List<Integer> numbers){
-        throw new RuntimeException("Not Implemented");
+        int size = numbers.size();
+        int largest = 0;
+        for (int i =0;i<size;i++) {
+            if (largest<numbers.get(i)){
+                largest =i;
+            }
+        }
+        return largest;
     }
 
     /**
