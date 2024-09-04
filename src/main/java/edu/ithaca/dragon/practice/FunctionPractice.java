@@ -23,8 +23,8 @@ public class FunctionPractice {
      * @return the final price at register of the given item after discount and tax applied
      */
     public static double calcSalePrice(double originalPrice, double discountPercent, double salesTax){
-         double percentage = (discountPercent /100)+1;
-        return (originalPrice*percentage)+salesTax;
+         double percentage = (discountPercent /100)*originalPrice;
+        return (originalPrice-percentage)+salesTax;
     }
 
     /**
@@ -47,8 +47,13 @@ public class FunctionPractice {
     public static int findFirstLargest(List<Integer> numbers){
         int size = numbers.size();
         int largest = 0;
+        int number = 0;
+        if (size == 0){
+            return -1;
+        }
         for (int i =0;i<size;i++) {
-            if (largest<numbers.get(i)){
+            if (number<numbers.get(i)){
+                number = numbers.get(i);
                 largest =i;
             }
         }
@@ -60,16 +65,45 @@ public class FunctionPractice {
      * If the largest number occurs more than once, return the index of the last occurence.
      */
     public static int findLastLargest(List<Integer> numbers){
-        throw new RuntimeException("Not Implemented");
+        int size = numbers.size();
+        int largest = 0;
+        int number = 0;
+        if (size == 0){
+            return -1;
+        }
+        for (int i =0;i<size;i++) {
+            if (number<=numbers.get(i)){
+                number = numbers.get(i);
+                largest =i;
+            }
+        }
+        return largest;
     }
+    
 
     /**
      * @return the string that has contains the most occurences of the given letter
      * @throws 
      */
     public static String findFirstMostOccurencesOfLetter(List<String> words, char letter){
-        throw new RuntimeException("Not Implemented");
+        int size = words.size();
+        int largest = 0;
+        int index = 0;
+        for (int i =0;i<size;i++) {
+            int counter = 0;
+            for (int c = 0; c<words.get(i).length();c++){
+                if (letter == words.get(i).charAt(c)){
+                    counter = counter +1;
+                }
+            }
+            if (counter>largest){
+                largest = counter;
+                index = i;
+            }
+        }
+        return words.get(index);
+    }
     }
 
 
-}
+

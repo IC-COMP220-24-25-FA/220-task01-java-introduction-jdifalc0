@@ -52,6 +52,7 @@ public class FunctionPracticeTest {
         testList.add(5,5);
         assertEquals(4, FunctionPractice.findFirstLargest(testList)); 
     }
+    @Test
     public void findLastLargestTest(){
         List<Integer> testList;
         testList= new ArrayList<Integer>();
@@ -62,8 +63,9 @@ public class FunctionPracticeTest {
         testList.add(4,5);
         assertEquals(4, FunctionPractice.findLastLargest(testList));
         testList.add(2,5);
-        assertEquals(4, FunctionPractice.findLastLargest(testList));
+        assertEquals(5, FunctionPractice.findLastLargest(testList));
     }
+    @Test
     public void findFirstMostOccurencesOfLettertest(){
         List<String> testList;
         testList= new ArrayList<String>();
@@ -72,7 +74,7 @@ public class FunctionPracticeTest {
         testList.add(2,"people");
         testList.add(3,"symetrical");
         testList.add(4,"lines");
-        assertEquals(2, FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'e'));
-        assertEquals(0, FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'p'));
+        assertEquals("people", FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'e'));
+        assertEquals("apple", FunctionPractice.findFirstMostOccurencesOfLetter(testList, 'p'));
     }
 }
