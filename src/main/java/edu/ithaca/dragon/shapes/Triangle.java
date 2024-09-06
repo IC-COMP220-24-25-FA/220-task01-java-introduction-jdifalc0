@@ -2,7 +2,7 @@ package edu.ithaca.dragon.shapes;
 
 import java.lang.classfile.instruction.ThrowInstruction;
 
-public class Triangle {
+public class Triangle implements Shape {
     private double sideA;
     private double sideB;
     private double sideC;

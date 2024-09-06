@@ -1,9 +1,8 @@
 package edu.ithaca.dragon.shapes;
 
-import java.awt.Shape;
 import java.lang.classfile.instruction.ThrowInstruction;
 
-public class Circle  {
+public class Circle implements Shape  {
     private double radius;
 
     /**
