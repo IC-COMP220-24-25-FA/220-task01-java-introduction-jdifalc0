@@ -32,4 +32,7 @@ public class Triangle {
         double area = calcArea();
         return 2*(area/sideB);
     }
+    public String tostring(){
+        return "Triangle, SideA:"+ this.sideA+"SideB:"+this.sideB+"SideC"+this.sideC;
+    }
 }

@@ -22,7 +22,7 @@ public class Rectangle {
         return Math.sqrt(Math.pow(this.length,2)+Math.pow(this.width,2));
     }
     public String toString(){
-        return this.length+","+this.width;
+        return"Square, Length:"+ this.length+"Width:"+this.width;
     } 
     
 }

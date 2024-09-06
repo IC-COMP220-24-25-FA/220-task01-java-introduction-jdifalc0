@@ -1,8 +1,9 @@
 package edu.ithaca.dragon.shapes;
 
+import java.awt.Shape;
 import java.lang.classfile.instruction.ThrowInstruction;
 
-public class Circle {
+public class Circle  {
     private double radius;
 
     /**
@@ -34,5 +35,8 @@ public class Circle {
      */
     public double longestLineWithin(){
         return (this.radius *2);
+    }
+    public String tostring(){
+        return "Circle, Radius:"+ this.radius+"";
     }
 }
