@@ -17,7 +17,7 @@ public class TriangleTest {
     
     @Test
     public void calcAreaTest(){
-        Triangle myTriangle = new Trianggle(4,6,8);
+        Triangle myTriangle = new Triangle(4,6,8);
         //3rd parameter says how far off it can be since it is a double
         assertEquals(11.62, myTriangle.calcArea(),.001);
         

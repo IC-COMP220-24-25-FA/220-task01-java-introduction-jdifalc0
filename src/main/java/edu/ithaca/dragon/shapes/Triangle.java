@@ -3,9 +3,9 @@ package edu.ithaca.dragon.shapes;
 import java.lang.classfile.instruction.ThrowInstruction;
 
 public class Triangle implements Shape {
-    private double sideA;
-    private double sideB;
-    private double sideC;
+    double sideA;
+    double sideB;
+    double sideC;
 
     /**
      * @throws IllegalArgumentException if radius is not a positive number

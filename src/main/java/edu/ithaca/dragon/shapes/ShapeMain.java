@@ -1,6 +1,10 @@
 package edu.ithaca.dragon.shapes;
+import java.lang.reflect.Array;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner; 
-
+import java.util.random.*;
 public class ShapeMain {
     
     public static void main(String[] args){
@@ -24,6 +28,28 @@ public class ShapeMain {
             Scanner myObj = new Scanner(System.in);
             int choiceint= myObj.nextInt();
             rectangles[choiceint].doubleSize();
+        
+        }
+        List<Shape> shapeList= new ArrayList<Shape>();
+        for (int i =0; i<10;i++){
+            int typeShape= (int)(Math.random()*2);
+            if (typeShape == 0){
+                shapeList.add(new Circle(Math.random()));
+            }
+            else if (typeShape==1){
+                shapeList.add(new Rectangle(Math.random(),Math.random()));
+            }
+            else{
+                shapeList.add(new Triangle(Math.random(),Math.random(),Math.random()));
+            }
+
+        }
+        for (int i =0; i<shapeList.size();i++){
+            System.out.println(shapeList.get(i));
+        }
+        for (int i =0; i<shapeList.size();i++){
+            shapeList.get(i).doubleSize();
+            System.out.println(shapeList.get(i));
         }
 
 
